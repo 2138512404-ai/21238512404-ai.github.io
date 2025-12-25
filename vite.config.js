@@ -11,12 +11,14 @@ export default defineConfig({
   },
   plugins: [vue(),WindiCSS()],
 
-
-  base: '/', 
+  base: process.env.NODE_ENV === 'production' 
+    ? '/21238512404-ai.github.io/' 
+    : '/',  
+  
   build: {
-    outDir: 'dist', 
-    assetsDir: 'assets', 
-    chunkSizeWarningLimit: 1500, 
+    outDir: 'dist',
+    assetsDir: 'assets',
+    chunkSizeWarningLimit: 1500,
     minify: 'esbuild',
     rollupOptions: {
       output: {
@@ -30,7 +32,6 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    open: true 
+    open: true
   }
 })
-
