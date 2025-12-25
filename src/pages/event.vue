@@ -15,7 +15,7 @@
     </div>
 
     <div class="todo-debug">
-      待办总数：{{ allTodos.length }} | 当前日期：{{ targetDate }} | 完成率：{{ completedPercentage }}%
+      待办总数：{{ todoList.length }} | 当前日期：{{ targetDate }} | 完成率：{{ completedPercentage }}%
     </div>
 
     <div class="progress-container">
